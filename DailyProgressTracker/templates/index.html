@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 Days of Code Progress Tracker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}">
+<style>
+    @keyframes load {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: {{ progress }}%;
+        }
+    }
+</style>
+</head>
+<body>
+    <!-- Flash messages -->
+    <div class="container mt-5">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        <span>{{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <h1 class="text-center">100 Days of Code Progress Tracker</h1>
+        <form method="POST" action="{{ url_for('submit_route') }}">
+            <div class="form-group">
+                <label for="revised">Topics Revised:</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="revised" name="revised" placeholder="Enter the topic that you revised today">
+                    <div class="input-group-append">
+                        <button class="btn btn-success ml-3" type="button" onclick="addToList('revised-list', 'revised')">Add</button>
+                    </div>
+                </div>
+                <ul class="list-group" id="revised-list"></ul>
+            </div>
+            <div class="form-group">
+                <label for="solved">Questions Solved:</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="solved" name="solved" placeholder="Enter the question-id and title that you solved today in this format 23. Two Sum">
+                    <div class="input-group-append">
+                        <button class="btn btn-success ml-3" type="button" onclick="addToList('solved-list', 'solved')">Add</button>
+                    </div>
+                </div>
+                <ul class="list-group" id="solved-list"></ul>
+            </div>
+            <div class="form-group">
+                <div class="row gap-1">
+                    <div class="col-md">
+                        <button type="button" class="btn btn-primary btn-block" onclick="submitForm()">Submit</button>
+                    </div>
+                    <div class="col-md">
+                        <button type="button" class="btn btn-secondary btn-block" onclick="window.location.href='{{ url_for('clear_inputs_route') }}'">Clear</button>
+                    </div>
+                </div>
+                <div class="row mt-3 gap-1">
+                    <div class="col-md">
+                        <button type="button" class="btn btn-primary btn-block twitter-custom-bg" onclick="window.location.href='{{ url_for('tweet_progress_route') }}'"><i class="fab fa-twitter mr-2"></i>Tweet it</button>
+                    </div>
+                    <div class="col-md">
+                        <button type="button" class="btn btn-primary btn-block github-custom-bg" onclick="window.location.href='{{ url_for('push_to_github_route') }}'"><i class="fab fa-github mr-2"></i>Commit to Git</button>
+                    </div>
+                </div>
+                <div class="row mt-3 gap-1">
+                    <div class="col-md">
+                        <button type="button" class="btn btn-primary btn-block clipboard-custom-bg" onclick="window.location.href='{{ url_for('copy_to_clipboard_route') }}'"><i class="fa fa-file-clipboard mr-2"></i>Copy to Clipboard</button>
+                    </div>
+                    <div class="col-md">
+                        <button type="button" class="btn btn-primary btn-block logs-custom-bg" onclick="window.location.href='{{ url_for('generate_logs_route') }}'"><i class="fa fa-pen-to-square mr-2"></i>Add to Logs</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- Add a progress bar -->
+        <div class="my-5">
+            <h2>Progress Tracker</h2>
+            <div class="chart">
+                <div class="bar"></div>
+                <span id="value1">{{ progress }}</span>
+            </div>
+          </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{url_for('static', filename='javascript/main.js')}}"></script>
+</body>
+</html>
