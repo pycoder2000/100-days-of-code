@@ -45,3 +45,11 @@ Revised:
 Solved:
 - [📌 1193. Monthly Transactions I](https://leetcode.com/problems/monthly-transactions-i/)
 - [📌 1174. Immediate Food Delivery II](https://leetcode.com/problems/immediate-food-delivery-ii/)
+
+### Day 6: May 14th, 2023
+
+**Today's Progress**
+
+Revised:
+- 📌 Skipped Day 5 as I working on a pet project. Decide to dedicate the weekend to the same 
+- 📌 Didn't solve any questions, but revised the ones I attempted this week
