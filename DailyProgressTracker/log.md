@@ -1,6 +1,6 @@
 # 100 Days Of Code - Log
 
-### Day 1: May 9th, 2023
+### Day 1: May 8th, 2023
 
 **Today's Progress**
 
@@ -46,10 +46,25 @@ Solved:
 - [📌 1193. Monthly Transactions I](https://leetcode.com/problems/monthly-transactions-i/)
 - [📌 1174. Immediate Food Delivery II](https://leetcode.com/problems/immediate-food-delivery-ii/)
 
-### Day 6: May 14th, 2023
+### Day 6: May 13th, 2023
 
 **Today's Progress**
 
 Revised:
 - 📌 Skipped Day 5 as I working on a pet project. Decide to dedicate the weekend to the same 
 - 📌 Didn't solve any questions, but revised the ones I attempted this week
+
+### Day 7: May 14th, 2023
+
+**Today's Progress**
+
+Revised:
+- 📌 Finished my pet project after 3 days
+- 📌 Refreshed my knowledge on the fundamentals of SQL
+
+Solved:
+- [📌 620. Not Boring Movies](https://leetcode.com/problems/not-boring-movies/)
+- [📌 1251. Average Selling Price](https://leetcode.com/problems/average-selling-price/)
+- [📌 1075. Project Employees I](https://leetcode.com/problems/project-employees-i/)
+- [📌 1633. Percentage of Users Attended a Contest](https://leetcode.com/problems/percentage-of-users-attended-a-contest/)
+- [📌 1164. Product Price at a Given Date](https://leetcode.com/problems/product-price-at-a-given-date/)
