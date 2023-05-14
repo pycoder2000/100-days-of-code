@@ -39,7 +39,7 @@ def push_to_github(file_name, local_branch, remote_branch):
     script_location = os.path.dirname(os.path.abspath(__file__))
     os.chdir(script_location)
 
-    os.system(f"git add {file_name}")
+    os.system(f"git add ./DailyProgressTracker/{file_name}")
     os.system(f"git commit -m '{session['commit_message']}'")
     os.system(f"git push {local_branch} {remote_branch}")
 
@@ -62,14 +62,14 @@ def generate_markdown_and_tweet(revised, solved):
     tweet_string = dedent(f"""\n
     Day {day_number} of 100
     """)
-    if revised != ['']:
+    if revised != [''] and revised != []:
         markdown_string += "\nRevised:\n"
         markdown_string += "\n".join([f"- {topic}" for topic in revised])
         
         tweet_string += "\nRevised:\n"
         tweet_string += "\n".join([f"- {topic}" for topic in revised])
     
-    if solved != ['']:
+    if solved != [''] and solved != []:
         if revised != ['']:
             markdown_string += "\n"
             tweet_string += "\n"

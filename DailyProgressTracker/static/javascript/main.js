@@ -12,15 +12,25 @@ function addToList(listId, inputId) {
     if (inputId === "solved" && !/^\d+\.\s*[A-Za-z]/.test(input)) {
       var flashMsg = `Your input ${input} doesn't match this format (23. Two Sum)`;
       var flashDiv = document.createElement("div");
-      flashDiv.className = "alert alert-danger";
-      flashDiv.style.textAlign = "center";
+      flashDiv.className = "alert alert-danger alert-dismissible fade show";
+      flashDiv.setAttribute("role", "alert");
       var flashText = document.createTextNode(flashMsg);
+      var closeBtn = document.createElement("button");
+      closeBtn.className = "close";
+      closeBtn.setAttribute("type", "button");
+      closeBtn.setAttribute("data-dismiss", "alert");
+      closeBtn.setAttribute("aria-label", "Close");
+      var closeIcon = document.createElement("span");
+      closeIcon.setAttribute("aria-hidden", "true");
+      closeIcon.innerHTML = "&times;";
+      closeBtn.appendChild(closeIcon);
+      flashDiv.appendChild(closeBtn);
       flashDiv.appendChild(flashText);
-      document.getElementById("flash-messages").appendChild(flashDiv);
+      var containerDiv = document.createElement("div");
+      containerDiv.className = "container mt-5";
+      containerDiv.appendChild(flashDiv);
+      document.body.insertBefore(containerDiv, document.body.firstChild);
       document.getElementById(inputId).value = "";
-      setTimeout(function () {
-        flashDiv.remove();
-      }, 3000);
       return;
     }
     var li = document.createElement("li");
@@ -31,6 +41,29 @@ function addToList(listId, inputId) {
     li.appendChild(text);
     document.getElementById(listId).appendChild(li);
     document.getElementById(inputId).value = "";
+  } else {
+    var flashMsg = "Please enter your progress";
+    var flashDiv = document.createElement("div");
+    flashDiv.className = "alert alert-danger alert-dismissible fade show";
+    flashDiv.setAttribute("role", "alert");
+    var flashText = document.createTextNode(flashMsg);
+    var closeBtn = document.createElement("button");
+    closeBtn.className = "close";
+    closeBtn.setAttribute("type", "button");
+    closeBtn.setAttribute("data-dismiss", "alert");
+    closeBtn.setAttribute("aria-label", "Close");
+    var closeIcon = document.createElement("span");
+    closeIcon.setAttribute("aria-hidden", "true");
+    closeIcon.innerHTML = "&times;";
+    closeBtn.appendChild(closeIcon);
+    flashDiv.appendChild(closeBtn);
+    flashDiv.appendChild(flashText);
+    var containerDiv = document.createElement("div");
+    containerDiv.className = "container mt-5";
+    containerDiv.appendChild(flashDiv);
+    document.body.insertBefore(containerDiv, document.body.firstChild);
+    document.getElementById(inputId).value = "";
+    return;
   }
 }
 
