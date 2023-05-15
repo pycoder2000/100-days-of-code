@@ -68,3 +68,17 @@ Solved:
 - [📌 1075. Project Employees I](https://leetcode.com/problems/project-employees-i/)
 - [📌 1633. Percentage of Users Attended a Contest](https://leetcode.com/problems/percentage-of-users-attended-a-contest/)
 - [📌 1164. Product Price at a Given Date](https://leetcode.com/problems/product-price-at-a-given-date/)
+
+### Day 8: May 15th, 2023
+
+**Today's Progress**
+
+Revised:
+- 📌 Orchestration (Apacha Kafka)
+- 📌 Breadth First Search
+- 📌 Depth First Search
+
+Solved:
+- [📌 1721. Swapping Nodes in a Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/)
+- [📌 197. Rising Temperature](https://leetcode.com/problems/rising-temperature/)
+- [📌 550. Game Play Analysis IV](https://leetcode.com/problems/game-play-analysis-iv/)
