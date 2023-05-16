@@ -82,3 +82,15 @@ Solved:
 - [📌 1721. Swapping Nodes in a Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/)
 - [📌 197. Rising Temperature](https://leetcode.com/problems/rising-temperature/)
 - [📌 550. Game Play Analysis IV](https://leetcode.com/problems/game-play-analysis-iv/)
+
+### Day 9: May 16th, 2023
+
+**Today's Progress**
+
+Revised:
+- 📌 Docker (Image creation and Management)
+- 📌 Deploying through Kubernetes pods and deployments
+
+Solved:
+- [📌 570. Managers with at Least 5 Direct Reports](https://leetcode.com/problems/managers-with-at-least-5-direct-reports/)
+- [📌 1934. Confirmation Rate](https://leetcode.com/problems/confirmation-rate/)
