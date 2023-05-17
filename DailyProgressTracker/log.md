@@ -94,3 +94,11 @@ Revised:
 Solved:
 - [📌 570. Managers with at Least 5 Direct Reports](https://leetcode.com/problems/managers-with-at-least-5-direct-reports/)
 - [📌 1934. Confirmation Rate](https://leetcode.com/problems/confirmation-rate/)
+
+### Day 10: May 18th, 2023
+
+**Today's Progress**
+
+Solved:
+- [📌 1211. Queries Quality and Percentage](https://leetcode.com/problems/queries-quality-and-percentage/)
+- [📌 2356. Number of Unique Subjects Taught by Each Teacher](https://leetcode.com/problems/number-of-unique-subjects-taught-by-each-teacher/)
