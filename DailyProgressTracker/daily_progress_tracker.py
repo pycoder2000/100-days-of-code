@@ -39,7 +39,7 @@ def push_to_github(file_name, local_branch, remote_branch):
     script_location = os.path.dirname(os.path.abspath(__file__))
     os.chdir(script_location)
 
-    os.system(f"git add ./DailyProgressTracker/{file_name}")
+    os.system(f"git add {script_location}/{file_name}")
     os.system(f"git commit -m '{session['commit_message']}'")
     os.system(f"git push {local_branch} {remote_branch}")
 
@@ -51,7 +51,7 @@ def tweet_progress():
     api.update_status(session['tweet'])
 
 def copy_to_clipboard():
-    pyperclip.copy(session['tweet'].strip())
+    pyperclip.copy(session['markdown'].strip())
 
 def generate_markdown_and_tweet(revised, solved):
     markdown_string = dedent(f"""
