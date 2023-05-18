@@ -51,7 +51,7 @@ def tweet_progress():
     api.update_status(session['tweet'])
 
 def copy_to_clipboard():
-    pyperclip.copy(session['markdown'].strip())
+    pyperclip.copy(session['tweet'].strip())
 
 def generate_markdown_and_tweet(revised, solved):
     markdown_string = dedent(f"""
